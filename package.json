@@ -1,7 +1,7 @@
 {
-  "name": "@finsweet/developer-starter",
+  "name": "@clementmurzeau/bbs",
   "version": "0.0.0",
-  "description": "Developer starter template for Finsweet projects.",
+  "description": "BBS Website",
   "homepage": "https://github.com/finsweet/developer-starter#readme",
   "license": "ISC",
   "keywords": [],
