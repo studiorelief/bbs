@@ -50,7 +50,14 @@ window.Webflow.push(() => {
     slickLoop();
   }
   // load gsap function in Home
-  if (currentPathname === '/equipe') {
+  if (currentPathname === '/equipe' && !isMobile()) {
     fadeBatch();
+  }
+
+  // Function to check if the device is mobile
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   }
 });
