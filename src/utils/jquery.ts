@@ -40,6 +40,7 @@ function jqueryCC() {
   // Custom text & afficage discount selon bouton
   $(document).ready(function () {
     $('.a--p-entretien').click(function () {
+      $('.p-discount_wrapper').fadeOut();
       $('.heading-style-h2.is-keilla.is-popup').text('Nous contacter');
     });
 
@@ -48,16 +49,37 @@ function jqueryCC() {
       $('.p-discount_wrapper').fadeIn();
     });
 
-    $('.p-general_close-w').click(function () {
-      $('.p-discount_wrapper').fadeOut();
-    });
-
     $('.a--p-brochure').click(function () {
+      $('.p-discount_wrapper').fadeOut();
       $('.heading-style-h2.is-keilla.is-popup').text('Telecharger la Brochure');
     });
 
     $('.a--p-contact').click(function () {
+      $('.p-discount_wrapper').fadeOut();
       $('.heading-style-h2.is-keilla.is-popup').text('Contact');
+    });
+
+    $('.a--p-contact-hero').click(function () {
+      $('.p-discount_wrapper').fadeOut();
+      $('.heading-style-h2.is-keilla.is-popup').text('Nous contacter');
+      $('.form_field-wrapper.is-linkedin').hide();
+      $('.form_field-wrapper.is-choix-formation-long').show();
+    });
+
+    $('.a--p-inscrivez-vous').click(function () {
+      $('.p-discount_wrapper').fadeOut();
+      $('.heading-style-h2.is-keilla.is-popup').text('Inscription');
+      $('.form_field-wrapper.is-linkedin').hide();
+      $('.form_field-wrapper.is-choix-formation-short').show();
+    });
+
+    $('.p-general_close-w').click(function () {
+      $('.p-discount_wrapper').fadeOut();
+      setTimeout(function () {
+        $('.form_field-wrapper.is-linkedin').show();
+        $('.form_field-wrapper.is-choix-formation-short').hide();
+        $('.form_field-wrapper.is-choix-formation-long').hide();
+      }, 500);
     });
   });
 
@@ -77,6 +99,12 @@ function jqueryCC() {
     });
     $('.a--p-contact.is-financement').click(function () {
       $('#general-form-origin').val('financement');
+    });
+    $('.a--p-contact-hero').click(function () {
+      $('#general-form-origin').val('contact-hero');
+    });
+    $('.a--p-inscrivez-vous').click(function () {
+      $('#general-form-origin').val('inscrivez-vous');
     });
   });
 }

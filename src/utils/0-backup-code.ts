@@ -2,24 +2,22 @@
 
 /* import $ from "jquery"; */
 
-var Webflow = Webflow || [];
-Webflow.push(function () {
   // Close nav on side click
-  $(".navbar_mobile-close").click(function (e) {
+ /*  $(".navbar_mobile-close").click(function (e) {
     e.preventDefault();
     $(".w-nav-button").trigger("click");
-  });
+  }); */
 
   // Add & Remove class - form entretien - main radio
-  $(".form_radio.is-main").click(function () {
+/*   $(".form_radio.is-main").click(function () {
     $(".form_radio.is-main").removeClass("is-active");
     $(".form_radio-state").removeClass("is-active");
     $(this).addClass("is-active");
     $(this).find(".form_radio-state").addClass("is-active");
-  });
+  }); */
 
   // Hide preheader & move navbar when scroll
-  $(document).ready(function () {
+/*   $(document).ready(function () {
     $(".preheader_component").css("display", "block");
   });
 
@@ -44,7 +42,7 @@ Webflow.push(function () {
         transform: "translateY(0rem)"
       });
     }
-  });
+  }); */
 
   // Popup with navbar Logo sticky - jQuery OK - Refaire module
   /*   $(document).ready(function () {
@@ -66,7 +64,7 @@ Webflow.push(function () {
   }); */
 
   // Custom text & afficage discount selon bouton
-  $(document).ready(function () {
+/*   $(document).ready(function () {
     $(".a--p-entretien").click(function () {
       $(".heading-style-h2.is-keilla.is-popup").text("Nous contacter");
     });
@@ -87,10 +85,10 @@ Webflow.push(function () {
     $(".a--p-contact").click(function () {
       $(".heading-style-h2.is-keilla.is-popup").text("Contact");
     });
-  });
+  }); */
 
   // Add query param in form
-  $(document).ready(function () {
+/*   $(document).ready(function () {
     $(".a--p-entretien").click(function () {
       $("#general-form-origin").val("entretien");
     });
@@ -106,10 +104,9 @@ Webflow.push(function () {
     $(".a--p-contact.is-financement").click(function () {
       $("#general-form-origin").val("financement");
     });
-  });
+  }); */
 
   // Form origin
-});
 
 // Style CSS
 /* Slick Slider Customizations */
@@ -238,10 +235,9 @@ Webflow.push(function () {
 // Equipe GSAP
 /* import { gsap } from "gsap"; */
 
-var Webflow = Webflow || [];
-Webflow.push(function () {
+
   /* a--fade-b animation */
-  gsap.set(".a--fade-b", { opacity: 0.1, y: 30 });
+/*   gsap.set(".a--fade-b", { opacity: 0.1, y: 30 });
 
   ScrollTrigger.batch(".a--fade-b", {
     onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.1 }),
@@ -251,7 +247,7 @@ Webflow.push(function () {
     start: "top 85%",
     end: "bottom 15%",
     markers: false
-  });
+  }); */
 
   /* a--fade-b animation V2 */
   /* $(".founders_partenaires-w").each(function (index) {
@@ -280,6 +276,6 @@ Webflow.push(function () {
     duration: 0.25,
     stagger: 0.25
   }); */
-});
+
 
   

@@ -3,12 +3,14 @@ import { greetUser } from '$utils/greet';
 import { animateElements, fadeBatch } from '$utils/gsap';
 import { jqueryCC } from '$utils/jquery';
 import { loadModelViewerScript } from '$utils/modal-viewer';
+import { animateHero, animatePreloader } from '$utils/preloader';
 import { slickLoop } from '$utils/slick';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
   const name = 'Clément';
   greetUser(name);
+
   // load modalviewser
   loadModelViewerScript()
     .then(() => {
@@ -60,4 +62,27 @@ window.Webflow.push(() => {
       navigator.userAgent
     );
   }
+
+  // Preloader only once a week
+  window.onload = function () {
+    // preloader
+    const preloader = document.getElementById('preloader');
+
+    // Vérifiez si le cookie de la première visite existe
+    if (
+      document.cookie.replace(/(?:(?:^|.*;\s*)firstVisit\s*\=\s*([^;]*).*$)|^.*$/, '$1') !== 'true'
+    ) {
+      // Si le cookie n'existe pas, c'est la première visite de l'utilisateur
+      // Afficher preloader
+      // Immediately set the display and opacity of .loader_component
+      animatePreloader();
+
+      // Puis, définissez le cookie pour indiquer que l'utilisateur a déjà visité le site
+      document.cookie = 'firstVisit=true; expires=Fri, 2023 23:59:59 GMT; path=/';
+    } else {
+      // Si le cookie existe, ce n'est pas la première visite de l'utilisateur
+      // Cachez votre preloader
+      animateHero();
+    }
+  };
 });
