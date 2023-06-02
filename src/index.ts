@@ -34,6 +34,9 @@ window.Webflow.push(() => {
     loadAttributesScript(
       'https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js'
     ),
+    loadAttributesScript(
+      'https://cdn.jsdelivr.net/npm/@finsweet/attributes-accordion@1/accordion.js'
+    ),
   ])
     .then(() => {
       console.log('All Finsweet Attributes scripts loaded');

@@ -20,7 +20,7 @@ function jqueryCC() {
   $(window).scroll(function () {
     const windowScrollTop = $(this).scrollTop();
 
-    if (windowScrollTop > 250 && $('.preheader_component').css('display') === 'block') {
+    if (windowScrollTop < 250 && $('.preheader_component').css('display') === 'block') {
       $('.preheader_component').css({
         transform: 'translateY(-2.6rem)',
       });
@@ -46,7 +46,7 @@ function jqueryCC() {
 
     $('.a--p-discount').click(function () {
       $('.heading-style-h2.is-keilla.is-popup').text('Nos discounts');
-      $('.p-discount_wrapper').fadeIn();
+      $('.p-discount_wrapper').fadeOut();
     });
 
     $('.a--p-brochure').click(function () {

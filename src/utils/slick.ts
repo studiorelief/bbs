@@ -1,4 +1,4 @@
-//SlickLoop V1 - No Observer
+/* SlickLo V1 - No Observerop */
 /* function slickLoop() 
   $('#cms-slider').slick({
     infinite: true,
