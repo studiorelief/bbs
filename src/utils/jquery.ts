@@ -64,6 +64,8 @@ function jqueryCC() {
       $('.heading-style-h2.is-keilla.is-popup').text('Nous contacter');
       $('.form_field-wrapper.is-linkedin').hide();
       $('.form_field-wrapper.is-choix-formation-long').show();
+      // add required on open<
+      $('#choix-formation-long').prop('required', true);
     });
 
     $('.a--p-inscrivez-vous').click(function () {
@@ -71,6 +73,8 @@ function jqueryCC() {
       $('.heading-style-h2.is-keilla.is-popup').text('Inscription');
       $('.form_field-wrapper.is-linkedin').hide();
       $('.form_field-wrapper.is-choix-formation-short').show();
+      // add required on open
+      $('#choix-formation-short').prop('required', true);
     });
 
     $('.p-general_close-w').click(function () {
@@ -79,6 +83,9 @@ function jqueryCC() {
         $('.form_field-wrapper.is-linkedin').show();
         $('.form_field-wrapper.is-choix-formation-short').hide();
         $('.form_field-wrapper.is-choix-formation-long').hide();
+        // remove required on close
+        $('#choix-formation-long').prop('required', false);
+        $('#choix-formation-short').prop('required', false);
       }, 500);
     });
   });
@@ -107,6 +114,8 @@ function jqueryCC() {
       $('#general-form-origin').val('inscrivez-vous');
     });
   });
+
+  // Add Required prop if visible
 }
 
 export { jqueryCC };
