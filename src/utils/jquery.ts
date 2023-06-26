@@ -52,6 +52,10 @@ function jqueryCC() {
     $('.a--p-brochure').click(function () {
       $('.p-discount_wrapper').fadeOut();
       $('.heading-style-h2.is-keilla.is-popup').text('Telecharger la Brochure');
+      $('.form_field-wrapper.is-linkedin').hide();
+      $('.form_field-wrapper.is-choix-formation-short').show();
+      // add required on open
+      $('#choix-formation-short').prop('required', true);
     });
 
     $('.a--p-contact').click(function () {
