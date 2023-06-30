@@ -1,4 +1,5 @@
 function jqueryCC() {
+  // Navbar
   $('.navbar_mobile-close').click(function (e) {
     e.preventDefault();
     $('.w-nav-button').trigger('click');
@@ -119,7 +120,39 @@ function jqueryCC() {
     });
   });
 
-  // Add Required prop if visible
+  /*   // Changer couleur du CTA Chat - Attendre 1 seconde
+  setTimeout(function () {
+    // Sélectionner l'élément avec l'attribut aria-label égal à "Ouvrir le chat en direct"
+    const element = $('[aria-haspopup="dialog"]');
+
+    // Changer la couleur de fond de l'élément
+    element.css('background-color', '#251C52');
+  }, 5000); */
+
+  // Page paiement
+  function showElements(showClass) {
+    $('.' + showClass).show();
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+
+  $('.p-paiement_filter').hide();
+
+  if (!urlParams.has('paiement')) {
+    showElements('p-paiement_filter.is-full');
+  } else if (urlParams.get('paiement') === 'virement') {
+    showElements('p-paiement_filter.is-virement');
+  } else if (urlParams.get('paiement') === 'cb') {
+    showElements('p-paiement_filter.is-cb');
+  } else if (urlParams.get('paiement') === 'crypto') {
+    showElements('p-paiement_filter.is-crypto');
+  } else if (urlParams.get('paiement') === 'cpf') {
+    showElements('p-paiement_filter.is-cpf');
+  } else if (urlParams.get('paiement') === 'pe') {
+    showElements('p-paiement_filter.is-pe');
+  } else if (urlParams.get('paiement') === 'opco') {
+    showElements('p-paiement_filter.is-opco');
+  }
 }
 
 export { jqueryCC };
