@@ -19,14 +19,18 @@ function jqueryCC() {
   });
 
   $(window).scroll(function () {
+    if (window.location.href.includes('/formation/')) {
+      return;
+    }
+
     const windowScrollTop = $(this).scrollTop();
 
     if (windowScrollTop < 250 && $('.preheader_component').css('display') === 'block') {
       $('.preheader_component').css({
-        transform: 'translateY(-2.6rem)',
+        transform: 'translateY(-2rem)',
       });
       $('.navbar_component').css({
-        transform: 'translateY(-2.6rem)',
+        transform: 'translateY(-2rem)',
       });
     } else {
       $('.preheader_component').css({
