@@ -45,8 +45,7 @@ function animateElements() {
   });
 }
 
-function fadeBatch() {
-  /* a--fade-b animation */
+/* function fadeBatch() {
   gsap.set('.a--fade-b', { opacity: 0.1, y: 30 });
 
   ScrollTrigger.batch('.a--fade-b', {
@@ -56,8 +55,8 @@ function fadeBatch() {
     onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, y: 30 }),
     start: 'top 85%',
     end: 'bottom 15%',
-    markers: false,
+    markers: true,
   });
-}
+} */
 
-export { animateElements, fadeBatch };
+export { animateElements };

@@ -57,10 +57,12 @@ window.Webflow.push(() => {
     animateElements();
     slickLoop();
   }
-  // load gsap function in Home
+  /*   // load gsap function in Home
   if (currentPathname === '/equipe' && !isMobile()) {
     fadeBatch();
-  }
+  } */
+
+  // Refresh on filter
 
   // Function to check if the device is mobile
   function isMobile() {
