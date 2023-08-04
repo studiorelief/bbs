@@ -71,7 +71,7 @@ window.Webflow.push(() => {
     );
   }
 
-  // Preloader only once a week
+  // Preloader only once a week 
   window.onload = function () {
     // preloader
     const preloader = document.getElementById('preloader');

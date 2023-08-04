@@ -159,4 +159,16 @@ function jqueryCC() {
   }
 }
 
+$(document).ready(function () {
+  // Check if URL contains /formation/
+  if (window.location.href.indexOf('/formation/') > -1) {
+    $('#brochure-trigger').click(function () {
+      const url1 = $('#brochure-1').attr('href');
+      const url2 = $('#brochure-2').attr('href');
+      window.open(url1, '_blank');
+      window.open(url2, '_blank');
+    });
+  }
+});
+
 export { jqueryCC };
