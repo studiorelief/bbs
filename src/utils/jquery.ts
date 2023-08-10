@@ -1,3 +1,6 @@
+import type jQuery from 'jquery';
+import $ from 'jquery';
+
 function jqueryCC() {
   // Navbar
   $('.navbar_mobile-close').click(function (e) {
@@ -160,8 +163,29 @@ function jqueryCC() {
 }
 
 $(document).ready(function () {
+  // Check if URL contains /formation/
+  if (window.location.href.indexOf('/formation/') > -1) {
+    $('#brochure-trigger').click(function () {
+      const url1 = $('#brochure-1').attr('href');
+      const url2 = $('#brochure-2').attr('href');
+      window.open(url1, '_blank');
+      window.open(url2, '_blank');
+    });
+  }
+});
+
+$(document).ready(function () {
+  $('#trigger-equipe').on('click', function () {
+    $('#target-equipe').click();
+  });
+  $('#trigger-organisation').on('click', function () {
+    $('#target-organisation').click();
+  });
   $('#trigger-avantages').on('click', function () {
     $('#target-avantages').click();
+  });
+  $('#trigger-engagement').on('click', function () {
+    $('#target-engagement').click();
   });
 });
 
