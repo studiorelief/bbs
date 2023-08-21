@@ -1,4 +1,3 @@
-import type jQuery from 'jquery';
 import $ from 'jquery';
 
 function jqueryCC() {
@@ -28,7 +27,11 @@ function jqueryCC() {
 
     const windowScrollTop = $(this).scrollTop();
 
-    if (windowScrollTop < 250 && $('.preheader_component').css('display') === 'block') {
+    if (
+      windowScrollTop !== undefined &&
+      windowScrollTop < 250 &&
+      $('.preheader_component').css('display') === 'block'
+    ) {
       $('.preheader_component').css({
         transform: 'translateY(-2rem)',
       });
@@ -127,17 +130,8 @@ function jqueryCC() {
     });
   });
 
-  /*   // Changer couleur du CTA Chat - Attendre 1 seconde
-  setTimeout(function () {
-    // Sélectionner l'élément avec l'attribut aria-label égal à "Ouvrir le chat en direct"
-    const element = $('[aria-haspopup="dialog"]');
-
-    // Changer la couleur de fond de l'élément
-    element.css('background-color', '#251C52');
-  }, 5000); */
-
   // Page paiement
-  function showElements(showClass) {
+  function showElements(showClass: string) {
     $('.' + showClass).show();
   }
 

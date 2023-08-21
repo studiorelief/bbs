@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import 'slick-carousel';
 
 function slickLoop() {
   const $carousel = $('#cms-slider');
@@ -41,9 +41,11 @@ function slickLoop() {
       },
     ],
   });
+  const carouselElement = $carousel.get(0); // Get the first element from the jQuery object
 
-  // Initialiser l'observer
-  observer.observe($carousel.get(0));
+  if (carouselElement) {
+    observer.observe(carouselElement); // Only observe if the element is not null or undefined
+  }
 }
 
 export { slickLoop };
