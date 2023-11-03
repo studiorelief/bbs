@@ -4,6 +4,7 @@ import { jqueryCC } from '$utils/jquery';
 import { loadModelViewerScript } from '$utils/modal-viewer';
 import { animateHero, animatePreloader } from '$utils/preloader';
 import { slickLoop } from '$utils/slick';
+import { fillUTMParametersFromUrl } from '$utils/utm';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -31,6 +32,9 @@ window.Webflow.push(() => {
       'https://cdn.jsdelivr.net/npm/@finsweet/attributes-copyclip@1/copyclip.js'
     ),
   ]);
+
+  // Load UTM tracking
+  fillUTMParametersFromUrl();
 
   // Load jQuery CC
   jqueryCC();

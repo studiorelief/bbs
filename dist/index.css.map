@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/index.css"],
-  "sourcesContent": ["/* Slick Slider Customizations */\n.slick-list {\n    display: flex;\n    overflow: visible;\n    width: 100%;\n  }\n  \n  .slick-track {\n    display: flex;\n    margin-left: none;\n  }\n  \n  .slick-slide {\n    width: 16.666666666666668%;\n  }"],
-  "mappings": ";AACA;AACI;AACA;AACA;AAAA;AAGF;AACE;AACA;AAAA;AAGF;AACE;AAAA;",
+  "sourcesContent": ["/* Slick Slider Customizations */\n.slick-list {\n    display: flex;\n    overflow: visible;\n    width: 100%;\n  }\n  \n  .slick-track {\n    display: flex;\n    margin-left: none;\n  }\n  \n  .slick-slide {\n    width: 16.666666666666668%;\n  }\n\n  .formation_top-c-wrapper {\n    content: \"\";\n    background: inherit;\n  }"],
+  "mappings": ";AACA;AACI;AACA;AACA;AAAA;AAGF;AACE;AACA;AAAA;AAGF;AACE;AAAA;AAGF;AACE;AACA;AAAA;",
   "names": []
 }

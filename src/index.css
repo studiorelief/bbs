@@ -13,3 +13,8 @@
   .slick-slide {
     width: 16.666666666666668%;
   }
+
+  .formation_top-c-wrapper {
+    content: "";
+    background: inherit;
+  }

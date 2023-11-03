@@ -52,17 +52,17 @@ function jqueryCC() {
   $(document).ready(function () {
     $('.a--p-entretien').click(function () {
       $('.p-discount_wrapper').fadeOut();
-      $('.heading-style-h2.is-keilla.is-popup').text('Nous contacter');
+      $('.heading-style-h2.is-keilla.is-popup').text('Nous ecrire');
     });
 
     $('.a--p-discount').click(function () {
-      $('.heading-style-h2.is-keilla.is-popup').text('Nos discounts');
+      $('.heading-style-h2.is-keilla.is-popup').text('Nous ecrire');
       $('.p-discount_wrapper').fadeOut();
     });
 
     $('.a--p-brochure').click(function () {
       $('.p-discount_wrapper').fadeOut();
-      $('.heading-style-h2.is-keilla.is-popup').text('Telecharger la Brochure');
+      $('.heading-style-h2.is-keilla.is-popup').text('Nous ecrire');
       $('.form_field-wrapper.is-linkedin').hide();
       $('.form_field-wrapper.is-choix-formation-short').show();
       // add required on open
@@ -71,12 +71,12 @@ function jqueryCC() {
 
     $('.a--p-contact').click(function () {
       $('.p-discount_wrapper').fadeOut();
-      $('.heading-style-h2.is-keilla.is-popup').text('Contact');
+      $('.heading-style-h2.is-keilla.is-popup').text('Nous ecrire');
     });
 
     $('.a--p-contact-hero').click(function () {
       $('.p-discount_wrapper').fadeOut();
-      $('.heading-style-h2.is-keilla.is-popup').text('Nous contacter');
+      $('.heading-style-h2.is-keilla.is-popup').text('Nous ecrire');
       $('.form_field-wrapper.is-linkedin').hide();
       $('.form_field-wrapper.is-choix-formation-long').show();
       // add required on open<
@@ -85,7 +85,7 @@ function jqueryCC() {
 
     $('.a--p-inscrivez-vous').click(function () {
       $('.p-discount_wrapper').fadeOut();
-      $('.heading-style-h2.is-keilla.is-popup').text('Inscription');
+      $('.heading-style-h2.is-keilla.is-popup').text('Nous ecrire');
       $('.form_field-wrapper.is-linkedin').hide();
       $('.form_field-wrapper.is-choix-formation-short').show();
       // add required on open
