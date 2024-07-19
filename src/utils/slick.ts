@@ -49,7 +49,7 @@ function slickLoop() {
 }
 
 function slickLoopPartners() {
-  const $carousel = $('#cms-slider');
+  const $carousel = $('#cms-slider-partners');
   const observer = new IntersectionObserver(
     function (entries) {
       if (entries[0].isIntersecting) {
@@ -70,7 +70,7 @@ function slickLoopPartners() {
     autoplaySpeed: 0,
     pauseOnFocus: true,
     pauseOnHover: true,
-    slidesToShow: 6,
+    slidesToShow: 5.5,
     slidesToScroll: 1,
     cssEase: 'linear',
     arrows: false,
