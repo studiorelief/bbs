@@ -3,7 +3,7 @@ import { animateElements } from '$utils/gsap';
 import { jqueryCC } from '$utils/jquery';
 import { loadModelViewerScript } from '$utils/modal-viewer';
 import { animateHero, animatePreloader } from '$utils/preloader';
-import { slickLoop } from '$utils/slick';
+import { slickLoop, slickLoopPartners } from '$utils/slick';
 import { fillUTMParametersFromUrl } from '$utils/utm';
 
 window.Webflow ||= [];
@@ -44,6 +44,7 @@ window.Webflow.push(() => {
   if (currentPathname === '/') {
     animateElements();
     slickLoop();
+    slickLoopPartners();
   }
 
   // Function to check if the device is mobile
