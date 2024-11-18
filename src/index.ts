@@ -71,4 +71,7 @@ window.Webflow.push(() => {
       animateHero();
     }
   };
+
+  // alert('test');
+  // openFormationAnchor();
 });
