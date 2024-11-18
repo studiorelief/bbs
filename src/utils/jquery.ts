@@ -172,6 +172,9 @@ $(document).ready(function () {
   $('#trigger-equipe').on('click', function () {
     $('#target-equipe').click();
   });
+  $('#trigger-mentor').on('click', function () {
+    $('#target-mentor').click();
+  });
   $('#trigger-organisation').on('click', function () {
     $('#target-organisation').click();
   });
