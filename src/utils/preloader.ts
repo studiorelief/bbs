@@ -30,7 +30,7 @@ function animateHero() {
     .timeline()
     .set('.home-hero_right', { scale: 0 })
     .set('.home-hero_right', { opacity: 0 })
-    .to('.home-hero_right', { scale: 1, opacity: 1, duration: 1.5 });
+    .to('.home-hero_right', { scale: 1.25, opacity: 1, duration: 1.5 });
 }
 
 // Call the function

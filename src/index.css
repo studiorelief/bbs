@@ -18,3 +18,9 @@
   content: '';
   background: inherit;
 }
+
+/* .swiper {
+  display: flex;
+  overflow: visible !important;
+  width: 100%;
+} */
