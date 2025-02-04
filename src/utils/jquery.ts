@@ -17,7 +17,7 @@ function jqueryCC() {
 
   // Hide preheader & move navbar when scroll
   $(document).ready(function () {
-    $('.preheader_component').css('display', 'block');
+    $('.preheader_component').css('display', 'flex');
   });
 
   $(window).scroll(function () {
@@ -30,7 +30,7 @@ function jqueryCC() {
     if (
       windowScrollTop !== undefined &&
       windowScrollTop < 250 &&
-      $('.preheader_component').css('display') === 'block'
+      $('.preheader_component').css('display') === 'flex'
     ) {
       $('.preheader_component').css({
         transform: 'translateY(-2rem)',
